@@ -1,0 +1,62 @@
+function report(trainData, testData ) 
+    trainData = readMyData(trainData);
+    testData  = readMyData(testData);
+    initialUSD      = 0; 
+    initialBitcoin  = 5; 
+    [sellUSD_train, sellBitcoin_train] = mymethod(trainData,initialUSD,initialBitcoin);
+    [sellUSD_est, sellBitcoin_test] = mymethod(testData,initialUSD,initialBitcoin);
+    x = VisEtc(sellBitcoin_train,sellUSD_train, trainData,'train');
+    
+
+
+function trueIndices = findTrueIndices(logicalList)
+    % Find indices of true elements in the logical list
+    trueIndices = find(logicalList);
+
+function lastDayBTC = VisEtc(sellBitcoin,sellUSD, bitcoinData, purposeOfMethod)
+    sellBTCIndices    = findTrueIndices(sellBitcoin.Action);
+    sellUSDIndices    = findTrueIndices(sellUSD.Action);
+    Average_BTC_Price = zeros(1, length(bitcoinData.Close));
+    averageClosePrice = mean(bitcoinData.Close);
+
+    if purposeOfMethod == "test"
+        for i = 1:(length(bitcoinData.Close))
+                Average_BTC_Price(i) = mean(bitcoinData.Close(1:i));
+                fprintf('Datet: $%s\n', bitcoinData.Date_2(i));
+                fprintf('USD Amount: $%.2f\n', sellUSD.Current_Price(i));
+                fprintf('BTC Amount: %.2f\n', sellBitcoin.Current_Price(i));
+                disp('***********************************');
+        end
+    end 
+   
+    figure;
+    plot(bitcoinData.Close, 'b-', 'LineWidth', 1.5);
+    hold on;
+    scatter(sellBTCIndices, bitcoinData.Close(sellBTCIndices), 100, 'go', 'filled');
+    scatter(sellUSDIndices, bitcoinData.Close(sellUSDIndices), 100, 'ro', 'filled');
+    plot([1, length(bitcoinData.Close)], [averageClosePrice, averageClosePrice], 'k--', 'LineWidth', 2);
+    xlabel('Data Points');
+    ylabel('Closing Price');
+    title('Buy and Sell Signals with Average Bitcoin Price at(Traning)');
+    legend('Closing Price', 'Buy Signal', 'Sell Signal', 'Average BTC Price');
+    grid on;
+    
+    if sellBitcoin.Current_Price(length(bitcoinData.Close)) == 0
+        sellBitcoin.Current_Price(length(bitcoinData.Close)) = sellUSD(length(bitcoinData.Close)).
+    end
+
+
+    %Save jpg
+    if purposeOfMethod == "train"
+        saveas(gcf, 'strategy.jpg');
+    end
+    if purposeOfMethod == "test"
+        saveas(gcf, 'result_test.jpg');
+        fprintf('BTC Amount: %.2f\n', sellBitcoin.Current_Price(length(bitcoinData.Close)));
+    end
+    hold off; 
+    
+    lastDayBTC = sellBitcoin.Current_Price(length(bitcoinData.Close));
+
+
+    
