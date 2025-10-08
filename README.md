@@ -27,7 +27,7 @@ The main goals are:
 ## 📸 Visuals
 
 ### Project Logo
-![Bitcoin Logo](https://github.com/user-attachments/assets/b632ae0c-1fb7-422f-a265-2dc57f24b4de)
+<img src="https://github.com/user-attachments/assets/b632ae0c-1fb7-422f-a265-2dc57f24b4de" alt="Bitcoin Logo" width="150"/>
 
 ### MATLAB Logo
 ![MATLAB Logo](https://github.com/user-attachments/assets/f543f28c-d305-49b2-bdb4-594b4ff672cd)
