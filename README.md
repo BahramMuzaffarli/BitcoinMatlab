@@ -2,6 +2,7 @@
 
 > A project for the **Numerical Methods** course at SGH, implementing Bitcoin buying and selling simulations using MATLAB.
 
+<img src="https://github.com/user-attachments/assets/e4f38b13-20a4-4d83-a893-e16053dd48a5" alt="Bitcoin Trading Concept" width="600"/>
 ---
 
 ## 🔍 Project Overview
@@ -23,12 +24,10 @@ The main goals are:
 - **Files:** `.m` scripts containing algorithms and analysis  
 
 
-### Project Logo
+
 <img src="https://github.com/user-attachments/assets/b632ae0c-1fb7-422f-a265-2dc57f24b4de" alt="Bitcoin Logo" width="150"/>
 
-### MATLAB Logo
 <img src="https://github.com/user-attachments/assets/f543f28c-d305-49b2-bdb4-594b4ff672cd" alt="MATLAB Logo" width="120"/>
 
 
-### General Concept (Buy & Sell Bitcoin)
 <img src="https://github.com/user-attachments/assets/e4f38b13-20a4-4d83-a893-e16053dd48a5" alt="Bitcoin Trading Concept" width="600"/>
