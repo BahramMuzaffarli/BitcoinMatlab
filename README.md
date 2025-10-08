@@ -22,34 +22,13 @@ The main goals are:
 - **Libraries / Toolboxes:** MATLAB core functions  
 - **Files:** `.m` scripts containing algorithms and analysis  
 
----
-
-## 📸 Visuals
 
 ### Project Logo
 <img src="https://github.com/user-attachments/assets/b632ae0c-1fb7-422f-a265-2dc57f24b4de" alt="Bitcoin Logo" width="150"/>
 
 ### MATLAB Logo
-![MATLAB Logo](https://github.com/user-attachments/assets/f543f28c-d305-49b2-bdb4-594b4ff672cd)
+<img src="https://github.com/user-attachments/assets/f543f28c-d305-49b2-bdb4-594b4ff672cd" alt="MATLAB Logo" width="120"/>
+
 
 ### General Concept (Buy & Sell Bitcoin)
-![Bitcoin Trading Concept](https://github.com/user-attachments/assets/e4f38b13-20a4-4d83-a893-e16053dd48a5)
-
----
-
-## 🚀 How to Run
-
-1. Open the project in **MATLAB**.  
-2. Load the relevant scripts (`*.m`) for analysis or simulation.  
-3. Run the scripts to see buy/sell signals and results.
-
----
-
-## 📂 Repository Structure
-
-```text
-BitcoinMatlab/
-├─ scripts/          # MATLAB scripts (.m) for trading simulation
-├─ data/             # Any price datasets (if applicable)
-├─ README.md         # Project documentation
-├─ assets/           # Logos and images
+<img src="https://github.com/user-attachments/assets/e4f38b13-20a4-4d83-a893-e16053dd48a5" alt="Bitcoin Trading Concept" width="600"/>
